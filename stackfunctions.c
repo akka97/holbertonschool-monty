@@ -25,7 +25,7 @@ void _push(stack_t **top, __attribute__((unused)) unsigned int line)
 	}
 	else
 	{
-		new_node->next = top;
+		new_node->next = *top;
 		(*top)->prev = new_node;
 		*top = new_node;
 	}
@@ -40,7 +40,7 @@ void _pall(stack_t **top, __attribute__((unused)) unsigned int line)
 {
 	stack_t *tmp = *top;
 
-	while (*tmp != NULL)
+	while (tmp != NULL)
 	{
 		printf("%d\n", tmp->n);
 		tmp = tmp->next;
@@ -55,10 +55,10 @@ void _pall(stack_t **top, __attribute__((unused)) unsigned int line)
 void _pint(stack_t **top, __attribute__((unused)) unsigned int line)
 {
 	if (*top != NULL)
-		printf("%d", (*top)->n);
+		printf("%d\n", (*top)->n);
 	else
 	{
-		printf(stderr, "L%u: can't pint, stack empty", line);
+		fprintf(stderr, "L%u: can't pint, stack empty\n", line);
 		exit(EXIT_FAILURE);
 	}
 }
@@ -81,11 +81,11 @@ void _pop(stack_t **top, unsigned int line)
 	*top = tmp;
 }
 /**
- * _add - function that adds top to elements of stack
+ * _swap - function that adds top to elements of stack
  * @top: pointer
  * @line: line
  */
-void _swap(stack_t **top, unsigned int line)
+void _add(stack_t **top, unsigned int line)
 {
 	stack_t *tmp;
 
