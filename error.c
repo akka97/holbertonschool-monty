@@ -19,7 +19,7 @@ void file_error(char **argv)
 	exit(EXIT_FAILURE);
 }
 /**
- * invalid_instructions - function that prints the error
+ * invalid_instruction - function that prints the error
  * @token: token
  * @line: line
  */

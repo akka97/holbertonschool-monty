@@ -45,6 +45,12 @@ void open_file(char **argv)
 		free(buff);
 	_free(top);
 }
+/**
+ * is_comment - function that find if its comment
+ * @token: token
+ * @line: line
+ * Return: -1 or 1
+ */
 int is_comment(char *token, unsigned int line)
 {
 	if (token[0] == '#')

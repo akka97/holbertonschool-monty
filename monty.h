@@ -52,6 +52,7 @@ int main(int argc, char **argv);
 void(*get_op(char *token, unsigned int line))(stack_t **stack, unsigned int line_number);
 void open_file(char **argv);
 int is_comment(char *token, unsigned int line);
+/*global variable*/
 int data;
 int num;
 #endif
