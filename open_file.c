@@ -28,7 +28,7 @@ void open_file(char **argv)
 		if (strcmp(token, "push") == 0)
 		{
 			token = strtok(NULL, "\n\t\r ");
-			num = atoi(token);
+			data = atoi(token);
 			p_func = get_op(command, line_counter);
 			p_func(&top, line_counter);
 		}

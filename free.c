@@ -3,7 +3,7 @@
  * _free - function that frees elements of stack
  * @head: list to free
  */
-void _free(stack_t *head)
+void _free(stack_t *top)
 {
 	stack_t *tmp;
 
