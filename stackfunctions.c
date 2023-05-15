@@ -6,8 +6,6 @@
  * @line: line
  */
 
-int data;
-
 void _push(stack_t **top, __attribute__((unused)) unsigned int line)
 {
 	stack_t *new_node = malloc(sizeof(stack_t));
@@ -38,7 +36,7 @@ void _push(stack_t **top, __attribute__((unused)) unsigned int line)
  * @top: pointer
  * @line: line
  */
-void _pall(stack_ **top, __attribute__((unused)) unsigned int line)
+void _pall(stack_t **top, __attribute__((unused)) unsigned int line)
 {
 	stack_t *tmp = *top;
 

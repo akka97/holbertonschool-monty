@@ -44,4 +44,6 @@ void _pop(stack_t **top, unsigned int line);
 void _swap(stack_t **top, unsigned int line);
 void _add(stack_t **top, unsigned int line);
 void _nop(stack_t **top, unsigned int line);
+int data;
+int num;
 #endif
