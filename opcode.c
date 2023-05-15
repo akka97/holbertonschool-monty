@@ -20,11 +20,12 @@ void (*get_op(char *token, unsigned int line))(stack_t **stack,
 		      {NULL, NULL},
 	};
 
-	for (i = 0; op[i].op_code != NULL; i++)
+	for (i = 0; op[i].opcode != NULL; i++)
 	{
-		if (strcmp(token, op[i].op_code) == 0)
+		if (strcmp(token, op[i].opcode) == 0)
 			return (op[i].f);
 	}
+	invalid_instruction(token, line);
 	return (NULL);
 }
 

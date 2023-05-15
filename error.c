@@ -26,5 +26,5 @@ void file_error(char **argv)
 void invalid_instruction(char *token, unsigned int line)
 {
 	fprintf(stderr, "L%u: unknown instruction %s\n", line, token);
-	exit(Exit_FAILURE);
+	exit(EXIT_FAILURE);
 }
