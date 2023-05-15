@@ -8,26 +8,26 @@
 
 void _push(stack_t **top, __attribute__((unused)) unsigned int line)
 {
-	stack_t *new_node = malloc(sizeof(stack_t));
+	stack_t *new_Node = malloc(sizeof(stack_t));
 
-	if (new_node == NULL)
+	if (new_Node == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
-	new_node->n = data;
-	new_node->prev = NULL;
+	new_Node->n = data;
+	new_Node->prev = NULL;
 
 	if (*top == NULL)
 	{
-		new_node->next = NULL;
-		*top = new_node;
+		new_Node->next = NULL;
+		*top = new_Node;
 	}
 	else
 	{
-		new_node->next = *top;
-		(*top)->prev = new_node;
-		*top = new_node;
+		new_Node->next = *top;
+		(*top)->prev = new_Node;
+		*top = new_Node;
 	}
 
 }

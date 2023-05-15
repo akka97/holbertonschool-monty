@@ -5,8 +5,8 @@
  * @line_number: line number
  * Return: return NULL
  */
-void (*get_op(char *token, unsigned int line))(stack_t **stack,
-		unsigned int line_number)
+void (*get_op(char *token, unsigned int line))(stack_t **stack, 						
+unsigned int line_number)
 {
 	int i;
 

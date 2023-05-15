@@ -1,9 +1,9 @@
 #include "monty.h"
 /**
  * _free - function that frees elements of stack
- * @top: pointer
+ * @head: list to free
  */
-void _free(stack_t *top)
+void _free(stack_t *head)
 {
 	stack_t *tmp;
 
@@ -13,7 +13,7 @@ void _free(stack_t *top)
 	{
 		tmp = top;
 		top = top->next;
-		free(tmp);
+		free (tmp);
 	}
-	free(top);
+	free (top);
 }

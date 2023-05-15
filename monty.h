@@ -44,15 +44,12 @@ void _swap(stack_t **top, unsigned int line);
 void _add(stack_t **top, unsigned int line);
 void _nop(stack_t **top, unsigned int line);
 void _free(stack_t *top);
-
+int is_num(char *n);
 void invalid_instruction(char *token, unsigned int line);
 void file_error(char **argv);
-void usage_error(void);
-int main(int argc, char **argv);
-void(*get_op(char *token, unsigned int line))(stack_t **stack, unsigned int line_number);
+void(*get_op(char *token, unsigned int line))(stack_t **, unsigned int);
 void open_file(char **argv);
 int is_comment(char *token, unsigned int line);
 /*global variable*/
 int data;
-int num;
 #endif
