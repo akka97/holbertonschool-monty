@@ -81,20 +81,20 @@ void _pop(stack_t **top, unsigned int line)
 	*top = tmp;
 }
 /**
- * _swap - function that frees element of stack
+ * _add - function that adds top to elements of stack
  * @top: pointer
  * @line: line
  */
 void _swap(stack_t **top, unsigned int line)
 {
-	int tmp_num;
+	stack_t *tmp;
 
 	if (*top == NULL || (*top)->next == NULL)
 	{
-		fprintf(stderr, "L%u: can't swap, stack too short\n", line);
+		fprintf(stderr, "L%u: can't add, stack too short\n", line);
 		exit(EXIT_FAILURE);
 	}
-	tmp_num = (*top)->n;
-	(*top)->n = (*top)->next->n;
-	(*top)->next->n = tmp_num;
+	tmp = (*top)->next;
+	tmp->n +=(*top)->n;
+	_pop(top, line);
 }

@@ -1,20 +1,21 @@
+#include "monty.h"
 /**
- * _add - function that adds top two elements of stack
+ * _swap - function that swaps top two elements of stack
  * @top: pointer
  * @line: line
  */
-void _add(stack_t **top, unsigned int line)
+void _swap(stack_t **top, unsigned int line)
 {
-	stack_t *tmp;
+	int tmp_num;
 
 	if (*top == NULL || (*top)->next == NULL)
 	{
-		fprintf(stderr, "L%u: can't sub, stack too short\n", line);
+		fprintf(stderr, "L%u: can't swap, stack too short\n", line);
 		exit(EXIT_FAILURE);
 	}
-	tmp = (*top)->next;
-	tmp->n -= (*top)->n;
-	_pop(top, line);
+	tmp_num = (*top)->n;
+	(*top)->n = (*top)->next->n;
+	(*top)->next->n = tmp_num;
 }
 /**
  * _nop - function that does nothing
